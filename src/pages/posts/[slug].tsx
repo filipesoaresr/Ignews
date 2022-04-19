@@ -16,7 +16,7 @@ interface PostProps {
 }
 
 
-// Páginas geradas de Forma estatica não são protejadas
+// Páginas geradas de Forma estatica não são protegidas
 export default function Post({ post }: PostProps) {
     return (
 
@@ -40,8 +40,8 @@ export default function Post({ post }: PostProps) {
 }
 
 
-// Necessita acessar a API do Prismic toda vez para buscar o conteudo do post,
-//Poré garante que somente os usuarios logados teram acesso ao post 
+// Necessita acessar a API do Prismic toda vez para buscar o conteudo do post
+//Mas garante que somente os usuarios logados teram acesso ao post 
 export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
 
     //Saber se o usuario está Logado
